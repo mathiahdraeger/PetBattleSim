@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainPane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UIBased.View.BattleSettingsController">
+   <center>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane fx:id="settingsPane" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="btnEnterSettings" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Enter Setings" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label fx:id="lblEnterHp" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Enter Battle HP" GridPane.rowIndex="2" />
+                  <Label fx:id="lblEnterSeed" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Enter seed" GridPane.rowIndex="3" />
+                  <Label fx:id="lblEnterPlayerNumber" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Enter Number of Players" GridPane.rowIndex="4" />
+                  <Label fx:id="lblEnterFightNumber" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="EnterNumber of Fights" GridPane.rowIndex="5" />
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="       Pet Fight Simulator" GridPane.columnSpan="2">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label text="            Enter Battle Settings" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Spinner fx:id="seedSpinner" editable="true" initialValue="1" max="1.7976931348623157E308" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" min="1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Spinner fx:id="numPlayersSpinner" editable="true" initialValue="2" max="1.7976931348623157E308" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" min="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Spinner fx:id="numFightsSpinner" editable="true" initialValue="1" max="1.7976931348623157E308" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" min="1" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label fx:id="lblEnterPlayerName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Player Name:" GridPane.rowIndex="8" />
+                  <Label fx:id="lblEnterPetName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Pet Name:" GridPane.rowIndex="9" />
+                  <RadioButton fx:id="btnPower" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Power" GridPane.rowIndex="10">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="PetTypes" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="btnSpeed" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Speed" toggleGroup="$PetTypes" GridPane.rowIndex="11" />
+                  <RadioButton fx:id="btnIntelligence" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Intelligence" toggleGroup="$PetTypes" GridPane.rowIndex="12" />
+                  <RadioButton fx:id="btnHuman" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Human" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="PlayerTypes" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="btnComputer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Computer" toggleGroup="$PlayerTypes" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                  <TextField fx:id="txtPlayerName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Enter Player Name" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <TextField fx:id="txtPetName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Enter Pet Name" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                  <Button fx:id="btnEnterInfo" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Enter" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                  <Label fx:id="lbl_PlayerNumber" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.rowIndex="7">
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Label>
+                  <Spinner fx:id="battleHpSpinner" editable="true" initialValue="20" max="1.7976931348623157E308" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" min="1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="lblPlayerNum" text="Player #" GridPane.rowIndex="7" />
+               </children>
+            </GridPane>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+</BorderPane>
